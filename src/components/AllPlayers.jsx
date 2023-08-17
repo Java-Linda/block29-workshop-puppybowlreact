@@ -5,3 +5,6 @@ export default function AllPlayers() {
         </div>
     )
 }
+
+// grab puppy info from API (try/catch)
+// render the puppies on the page 

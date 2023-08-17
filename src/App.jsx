@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import AllPlayers from "./components/AllPlayers";
+import MainSection from "./components/MainSection";
 import Footer from "./components/Footer";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 		<>
 			<div id="container">
 				<Navbar />
-				<AllPlayers />
+				<MainSection />
 				<Footer />
 			</div>
 		</>
