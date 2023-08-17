@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { fetchAllPlayers } from "../API";
-import SinglePlayer from "./SinglePlayer";
 import SeeDetails from "./SeeDetails";
 
 export default function AllPlayers() {

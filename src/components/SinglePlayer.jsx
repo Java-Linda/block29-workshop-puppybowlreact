@@ -4,7 +4,6 @@ import AllPlayers from "./AllPlayers";
 
 export default function SinglePlayer({ selectedPuppyId, setSelectedPuppyId }) {
 	const [player, setPlayer] = useState({});
-	console.log("player 0", player);
 
 	async function getSinglePuppy() {
 		try {
@@ -12,7 +11,7 @@ export default function SinglePlayer({ selectedPuppyId, setSelectedPuppyId }) {
 		} catch (err) {
 			console.error("Can't get this puppy", err);
 		}
-	}
+    }
 
 	useEffect(() => {
 		getSinglePuppy();
