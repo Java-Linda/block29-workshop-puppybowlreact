@@ -1,4 +1,4 @@
-import {Routes, Route, Link} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import AllPlayers from "./AllPlayers";
 import SinglePlayer from "./SinglePlayer";
 import NewPlayerForm from "./NewPlayerForm";
