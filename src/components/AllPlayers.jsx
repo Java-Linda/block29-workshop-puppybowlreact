@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { fetchAllPlayers } from "../API";
 import SinglePlayer from "./SinglePlayer";
+import SeeDetails from "./SeeDetails";
 
 export default function AllPlayers() {
-	const [players, setPlayers] = useState([]);
+    const [players, setPlayers] = useState([]);
+    const [selectedPuppyId, setSelectedPuppyId] = useState(null);
 
 	async function getAllPuppies() {
 		try {
@@ -28,7 +30,7 @@ export default function AllPlayers() {
 						<>
 							<h3>{player.name}</h3>
                             <img src={player.imageUrl} alt="dog" />
-                            <SinglePlayer/>
+                            <SeeDetails selectedPuppyId={player.id} setSelectedPuppyId={setSelectedPuppyId}/>
 						</>
 					);
 				})}

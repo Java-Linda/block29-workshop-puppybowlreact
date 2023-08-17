@@ -6,7 +6,7 @@ import Search from "./Search";
 import { useState } from "react";
 
 export default function MainSection() {
-    const [selectedPuppyId, setSelectedPuppyId] = useState(null);
+    // const [selectedPuppyId, setSelectedPuppyId] = useState(null);
     
     return (
         <div id="main-section">
