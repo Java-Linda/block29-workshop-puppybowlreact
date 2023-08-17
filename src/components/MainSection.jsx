@@ -3,8 +3,11 @@ import AllPlayers from "./AllPlayers";
 import SinglePlayer from "./SinglePlayer";
 import NewPlayerForm from "./NewPlayerForm";
 import Search from "./Search";
+import { useState } from "react";
 
 export default function MainSection() {
+    const [selectedPuppyId, setSelectedPuppyId] = useState(null);
+    
     return (
         <div id="main-section">
             <Routes>

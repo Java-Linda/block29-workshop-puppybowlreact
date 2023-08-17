@@ -11,3 +11,14 @@ export const fetchAllPlayers = async () => {
         console.error("Cannot fetch all players", error)
     }
 };
+
+export const fetchSinglePlayer = async (playerId) => {
+    try {
+        const response = await fetch(`${API_URL}/players/${playerId}`);
+        const puppy = await response.json();
+        const singlePuppy = puppy.data.player;
+        return singlePuppy;
+    } catch (error) {
+        console.error("Can't fetch player", error)
+    }
+};

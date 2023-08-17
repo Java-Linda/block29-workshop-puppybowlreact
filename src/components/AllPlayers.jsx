@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchAllPlayers } from "../API";
+import SinglePlayer from "./SinglePlayer";
 
 export default function AllPlayers() {
 	const [players, setPlayers] = useState([]);
@@ -27,6 +28,7 @@ export default function AllPlayers() {
 						<>
 							<h3>{player.name}</h3>
                             <img src={player.imageUrl} alt="dog" />
+                            <SinglePlayer/>
 						</>
 					);
 				})}
