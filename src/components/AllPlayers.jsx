@@ -1,7 +1,7 @@
 export default function AllPlayers() {
     return (
         <div>
-            <h1>ALL PLAYERS HERE</h1>
+            <h4>ALL PLAYERS HERE</h4>
         </div>
     )
 }

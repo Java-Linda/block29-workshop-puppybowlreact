@@ -1,5 +1,5 @@
 export default function Search() {
     return (
-        <h1>SEARCH BAR</h1>
+        <h4>SEARCH BAR</h4>
     )
 }

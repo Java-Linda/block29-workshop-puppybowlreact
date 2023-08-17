@@ -1,5 +1,5 @@
 export default function NewPlayerForm() {
     return (
-            <h1>FORM HERE</h1>
+            <h4>FORM HERE</h4>
     )
 }

@@ -1,5 +1,5 @@
 export default function SinglePlayer() {
     return (
-            <h1>SINGLE PLAYER HERE</h1>
+            <h4>SINGLE PLAYER HERE</h4>
     )
 }
