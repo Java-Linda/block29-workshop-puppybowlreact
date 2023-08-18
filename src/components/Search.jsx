@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { fetchAllPlayers } from "../API";
+import FilteredPlayers from "./FilteredPlayers";
 
 export default function Search() {
 	const [input, setInput] = useState("");
@@ -7,9 +8,6 @@ export default function Search() {
 
 	const fetchData = (value) => {
         fetchAllPlayers().then((json) => {
-            console.log("json", json)
-            console.log("value", value)
-
             const names = json.filter((player) => {
                 for (var name in player) {
                     if (player[name] == value) {
@@ -18,20 +16,12 @@ export default function Search() {
                 }
             })
 
-			const results = json.filter((player) => {
-				// console.log("value", value)
+			const filteredDogs = names.filter((player) => {
 				return value && player.name;
-			});
-            setResults(results);
-            // console.log("results", results);
+            });
+            console.log("results", filteredDogs)
+            setResults(filteredDogs);
 		});
-		// const re = new RegExp(value, "i");
-		// const filtered = results.filter((entry) =>
-		// 	Object.values(entry).some(
-		// 		(val) => typeof val === "string" && val.match(re)
-		// 	)
-        // );
-        // console.log("filtered", filtered);
 	};
 
 	
@@ -49,15 +39,10 @@ export default function Search() {
 					value={input}
 					placeholder="Search Puppies"
 					onChange={(e) => handleChange(e.target.value)}
-				/>
-			</form>
+                />
+            </form>
+            {results ? <FilteredPlayers filteredDogs={results}/> : <></>
+            }
 		</div>
 	);
 }
-
-// PSEUDOCODE
-
-// Accept an input from the user
-// Compare that input with puppy names on the page
-// from the all puppies array, grab all puppies with names matching the input and push to a new array/object
-// render the new object
