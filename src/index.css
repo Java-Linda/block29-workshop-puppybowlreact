@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -71,6 +71,7 @@ button:focus-visible {
 
 #navbar-container{
     display:flex;
+    font-size: 2rem;
 }
 
 #footer-container{
@@ -78,12 +79,13 @@ button:focus-visible {
 }
 
 /* all players render styling */
-/* #all-players-container {
+#all-players-container {
+    display: grid;
 }
-     */
+
      /* #all-players-header */
 #all-players-gallery {
-    display: flex;
+    display: inline-block;
     flex-wrap: wrap;
 }
 

@@ -27,9 +27,9 @@ export default function AllPlayers() {
 				{players.map((player) => {
 					return (
 						<>
-							<h3>{player.name}</h3>
-                            <img src={player.imageUrl} alt="dog" />
-                            <SeeDetails selectedPuppyId={player.id} setSelectedPuppyId={setSelectedPuppyId}/>
+							<h3 id="player-component">{player.name}</h3>
+                            <img id="player-component" src={player.imageUrl} alt="dog" />
+                            <SeeDetails id="player-component" selectedPuppyId={player.id} setSelectedPuppyId={setSelectedPuppyId}/>
 						</>
 					);
 				})}
